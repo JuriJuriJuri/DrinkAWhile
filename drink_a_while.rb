@@ -4,8 +4,7 @@ class Drinks
 		attr_accessor :alc
 		attr_accessor :vol
 	def drink(name, anzahl, alc, vol)
-		puts "was hast du getrunken"
-		@name = gets.chomp
+		@name = drinkname
 		@anzahl = anzahl
 		@alc = alc
 		@vol = vol
@@ -30,5 +29,18 @@ def promille (alk_in_g, gewicht, geschlecht)
 	alk_in_g/gewicht*geschlecht
 end
 
+puts "wie heißt du?"
+username = gets.chomp
+puts "Hallo#{username}, was hast du getrunken?"
+puts "was hast du getrunken?"
+drink_name = gets.chomp
+puts "und wie viele davon?"
+drink_anzahl = gets.chomp
+puts "und wie viel Alk hat der Stoff?"
+drink_alc = gets.chomp-float
+
 drink1 = Drinks.new
 trinker1 = Trinker.new
+
+input = gets.chomp
+puts input
