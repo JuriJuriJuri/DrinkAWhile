@@ -1,21 +1,24 @@
-class Drink
+class Drinks
 		attr_accessor :name
 		attr_accessor :anzahl
 		attr_accessor :alc
 		attr_accessor :vol
 	def drink(name, anzahl, alc, vol)
-		
+		puts "was hast du getrunken"
+		@name = gets.chomp
+		@anzahl = anzahl
+		@alc = alc
+		@vol = vol
 	end
 end
 
 class Trinker
+	attr_accessor :gewicht
+	attr_accessor :geschlecht
 	def trinker
 		@gewicht = gewicht
 		@geschlecht = geschlecht
 	end
-	attr_writer :gewicht
-	attr_writer :geschlecht
-
 end
 
 
@@ -27,10 +30,5 @@ def promille (alk_in_g, gewicht, geschlecht)
 	alk_in_g/gewicht*geschlecht
 end
 
-def geschlecht
-
-	
-end
-
-puts alk_in_g(4.7,500)
-
+drink1 = Drinks.new
+trinker1 = Trinker.new
