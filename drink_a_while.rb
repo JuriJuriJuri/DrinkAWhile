@@ -38,8 +38,15 @@ puts "und wie viele davon?"
 drink_anzahl = gets.chomp
 puts "und wie viel Alk hat der Stoff?"
 drink_alc = gets.chomp-float
+puts "und wie viel ist da drin?"
+drink_vol = gets.chomp
+puts "und wie viel wiegst du?"
+trinker_gewicht = gets.chomp
+puts "und bist du ein Mädchen oder ein Junge? (m/j)"
+trinker_geschlecht = gets.chomp
 
-drink1 = Drinks.new
+
+drink1 = Drinks.new (
 trinker1 = Trinker.new
 
 input = gets.chomp
