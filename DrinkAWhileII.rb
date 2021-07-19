@@ -1,5 +1,6 @@
 def promille (vol, alc, gewicht, geschlecht)
 		(vol/100*alc*0.8)/gewicht*geschlecht
+end
 
 puts "wie heißt du?"
 username = gets.chomp
