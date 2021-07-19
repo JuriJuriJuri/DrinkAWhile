@@ -20,11 +20,16 @@ trinker_geschlecht = gets.chomp.downcase
  while trinker_geschlecht !="m" && trinker_geschlecht !="j" 
    puts "junge oder Mädchen?(m/j)"
    trinker_geschlecht = gets.chomp.downcase
+   end
    if  trinker_geschlecht == "j" then geschlecht = 0.7 
    end
    if trinker_geschlecht == "m" then geschlecht = 0.6  
    end
-  end   
+   
 puts trinker_geschlecht
 puts geschlecht
   
+
+
+promille = (vol/100*alc*0.8)/gewicht*geschlecht
+puts "alright, du hast #{promille}" 'promille'"
