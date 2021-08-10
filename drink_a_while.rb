@@ -3,51 +3,57 @@ class Drinks
 		attr_accessor :anzahl
 		attr_accessor :alc
 		attr_accessor :vol
-	def drink(name, anzahl, alc, vol)
-		@name = drinkname
-		@anzahl = anzahl
-		@alc = alc
-		@vol = vol
+	def initialize(name, anzahl, alc, vol)
+		@name = drink_name
+		@anzahl = drink_anzahl
+		@alc = drink_alc
+		@vol = drink_vol*drink_anzahl
+
 	end
 end
 
 class Trinker
 	attr_accessor :gewicht
 	attr_accessor :geschlecht
-	def trinker
-		@gewicht = gewicht
-		@geschlecht = geschlecht
+	def initialize(gewicht, geschlecht)
+		@gewicht = trinker_gewicht
+		@geschlecht = trinker_geschlecht
 	end
 end
 
 
 def alk_in_g(alc, vol)
 	vol/100*alc*0.8
+	return alk_in_g
 end
 
-def promille (alk_in_g, gewicht, geschlecht)
-	alk_in_g/gewicht*geschlecht
+def promille(alc, vol, gewicht, geschlecht)
+	(vol/100*alc*0.8)/gewicht*geschlecht
 end
 
-puts "wie heißt du?"
-username = gets.chomp
-puts "Hallo#{username}, was hast du getrunken?"
-puts "was hast du getrunken?"
-drink_name = gets.chomp
+
 puts "und wie viele davon?"
-drink_anzahl = gets.chomp
+drink_anzahl = 5
 puts "und wie viel Alk hat der Stoff?"
-drink_alc = gets.chomp-float
+drink_alc = 5
 puts "und wie viel ist da drin?"
-drink_vol = gets.chomp
+drink_vol = 500
 puts "und wie viel wiegst du?"
-trinker_gewicht = gets.chomp
+trinker_gewicht = 70
 puts "und bist du ein Mädchen oder ein Junge? (m/j)"
-trinker_geschlecht = gets.chomp
+#trinker_geschlecht = gets.chomp
+
+vol = drink_vol*drink_anzahl
+geschlecht = 0.8 
+#if trinker_geschlecht == "m" 
+#geschlecht = 0.7 if trinker_geschlecht == "j"  
 
 
-drink1 = Drinks.new (
-trinker1 = Trinker.new
 
-input = gets.chomp
-puts input
+puts promille(5, 1500, 75, 0.7)
+
+#puts "wie heißt du?"
+#username = gets.chomp
+#puts "Hallo#{username}, was hast du getrunken?"
+#puts "was hast du getrunken?"
+#drink_name = gets.chomp
